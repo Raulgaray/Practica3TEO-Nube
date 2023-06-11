@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Editar producto</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 20px;
+		}
+
+		h1 {
+			color: #333;
+		}
+
+		form {
+			margin-bottom: 20px;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		input[type="text"],
+		input[type="file"] {
+			width: 300px;
+			padding: 5px;
+			margin-bottom: 10px;
+		}
+
+		button {
+			padding: 10px 20px;
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+
+		a {
+			color: #007bff;
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Editar Estudiante</h1>
+	<form method="post" action="/update/<%= data.id %>">
+		<label for="nombre">Nombre:</label>
+		<input type="text" name="nombre" id="nombre" value="<%= data.nombre %>">
+		<br>
+		<label for="descripcion">Apellido:</label>
+		<input type="text" name="apellido" id="apellido" value="<%= data.apellido %>">
+		<br>
+		<label for="descripcion">Codigo:</label>
+		<input type="text" name="codigo" id="codigo" value="<%= data.apellido %>">
+		<br>
+		<label for="precio">Carrera:</label>
+		<input type="text" name="carrera" id="carrera" value="<%= data.precio %>">
+		<br>
+		
+		<br>
+		<button type="submit" class="btn btn-primary">Guardar</button>
+	</form>
+	<br>
+	<a href="/">Volver al inicio</a>
+</body>
+
+</html>
