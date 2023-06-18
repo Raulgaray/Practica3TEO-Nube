@@ -1,11 +1,11 @@
-require('dotenv').config();
+//require('dotenv').config();
 const express = require('express');
 const AWS = require('aws-sdk');
 const app = express();
 const port = 3000;
 
 const mysql = require('mysql2');
-const connection = mysql.createConnection(process.env.DATABASE_URL);
+const connection = require('./db');
 
 const bodyParser = require('body-parser');
 const multer = require('multer');
